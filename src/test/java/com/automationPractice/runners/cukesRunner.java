@@ -1,2 +1,19 @@
-package com.automationPractice.runners;public class cukesRunner {
+package com.automationPractice.runners;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+
+        plugin = "html:target/cucumber-report.html",
+        features = "src/test/resources/features",
+        glue = "com/automationPractice/step_definitions",
+        dryRun = false,
+        tags = ""
+)
+
+public class cukesRunner {
 }
+
