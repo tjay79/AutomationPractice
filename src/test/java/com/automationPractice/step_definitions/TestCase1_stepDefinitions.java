@@ -99,11 +99,11 @@ public class TestCase1_stepDefinitions {
     @When("user clicks the continue button")
     public void user_clicks_the_continue_button() {
         signUpPage.continueButton.click();
-        //Driver.getDriver().switchTo().frame(signUpPage.adIframe);
-        //signUpPage.closeAd.click();
-        //Driver.getDriver().switchTo().defaultContent();
-        Driver.getDriver().navigate().refresh();
-        signUpPage.continueButton.click();
+        Driver.getDriver().switchTo().frame(signUpPage.firstIframe);
+        Driver.getDriver().switchTo().frame(signUpPage.adIframe);
+        signUpPage.closeAd.click();
+        Driver.getDriver().switchTo().defaultContent();
+
 
     }
     @When("user verifies that the logged in as username is visible")

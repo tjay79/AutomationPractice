@@ -95,6 +95,9 @@ public class SignUpPage {
     @FindBy(xpath = "//h2[@class='title text-center']")
     public WebElement accountDeletedMessage;
 
+    @FindBy(xpath = "//*[@id='aswift_2']")
+    public WebElement firstIframe;
+
     @FindBy(xpath = "//*[@id='ad_iframe']")
     public WebElement adIframe;
 
